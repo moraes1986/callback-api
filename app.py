@@ -4,7 +4,7 @@ import logging
 app = Flask(__name__)
 
 # Definindo um endpoint para o webhook
-@app.route('/webhook', methods=['POST'])
+@app.route('/webhook', methods=['POST,GET,PUT,DELETE'])
 def webhook():
     # Obtendo os dados enviados no corpo da requisição
     data = request.get_json()
